@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Thunder-BoldLC';
+    src: url('../fonts/Thunder-BoldLC.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'MarkPro-Book';
+    src: url('../fonts/MarkPro-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'MarkPro-Bold';
+    src: url('../fonts/MarkPro-Bold.otf') format('opentype');
+}
+
+h1 {
+    font-family: 'Thunder-BoldLC', serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+
+.achtegrondfoto {
+    margin: 30px;
+    height: calc(100vh - 60px);
+    width: calc(100vw - 60px);
+    /* background-image: url('../nutritalk/content/achtergrond_1_adobe_stock_823670847.jpg'); */
+    background-image: url('../content/achtergrond_1_adobe_stock_823670847.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 120px);
+    background-color: rgba(00, 00, 00, 0.65);
+    border-radius: 32px;
+    padding: 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'MarkPro-Bold', serif;
+    font-size: 1em;
+}
+
+.links a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #121212;
+    border-radius: 32px;
+}
+
+.links a:first-child {
+    background-color: white;
+    margin: 10px;
+}
+
+.links a:last-child {
+    background-color: #90FF00;
+    margin: 10px;
+}
+
+h1 {
+    color: white;
+}
+
+.header {
+    display: flex;
+    width: calc(100vw - 150px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    height: 4vh;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    font-family: 'MarkPro-Bold', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #90FF00;
+}
+
+footer img {
+    height: 45px;
+    padding: 0 10px;
+    opacity: 0.5;
+}
+
+footer img:hover {
+    opacity: 1;
+}
+
+.primary_content {
+    width: 50vw;
+}
+
+footer a {
+    text-decoration: none;
+}
