@@ -14,6 +14,7 @@
     src: url('../fonts/MarkPro-Bold.otf') format('opentype');
 }
 
+
 /* Algemeen */
 body {
     margin: 0;
@@ -26,8 +27,10 @@ h1 {
     font-family: 'Thunder-BoldLC', serif;
     text-transform: uppercase;
     font-size: 5em;
-    margin: 0;
     color: white;
+    letter-spacing: 0.025em;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
 }
 
 h2 {
@@ -35,12 +38,13 @@ h2 {
     text-transform: uppercase;
     font-size: 2.5em;
     margin: 0;
+    letter-spacing: 0.025em;
 }
 
 h3 {
     font-family: 'MarkPro-Book', serif;
     font-size: 1em;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.025em;
 }
 
 p {
@@ -55,8 +59,7 @@ a {
     line-height: 1.5;
 }
 
-
-/* Achtergond Foto */
+/* Achtergrond Foto */
 body>div {
     margin: 30px;
     min-height: calc(100vh - 60px);
@@ -70,7 +73,7 @@ body>div {
 }
 
 /* Primary Content */
-body>Div>Div {
+body>div>div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,16 +85,12 @@ body>Div>Div {
     padding: 30px;
 }
 
-Main>div {
-    width: 50vw;
-}
-
 .primary_content {
-    width: 50vw;
     min-height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* Header / Nav */
@@ -104,7 +103,7 @@ header {
     color: white;
 }
 
-Header img {
+header img {
     height: 4vh;
 }
 
@@ -135,7 +134,9 @@ nav a:hover {
 .links {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: -25vh;
+    margin-bottom: 25vh;
+    padding: 30px;
     font-family: 'MarkPro-Bold', serif;
     font-size: 1em;
 }
@@ -170,34 +171,107 @@ nav a:hover {
     gap: 30px;
 }
 
-article {
-    background-color: #90FF00;
-    padding: 60px;
-    border-radius: 32px;
-    color: #121212;
-    text-align: start;
-}
-
-article>a {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: #121212;
-    text-decoration: none;
-}
-
-article>a img {
-    height: 2.25em;
-    margin-right: 15px;
-}
-
-article>a :hover {
-    text-decoration: underline;
+.cards a {
+    color: white;
     text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+    text-underline-offset: 4px;
+    font-family: 'MarkPro-Book', serif;
 }
 
+.cards a:hover {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.5s ease;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
 
+.cards img {
+    padding-right: 10px;
+}
+
+.cards>div>div {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 16px 16px 0px 0;
+}
+
+/* ALLE AFBEELDINGEN ZIJN GECOMPRIMEERD EN KLEINER DAN 750 KB */
+
+.cards>div:nth-child(1)>div {
+    background-image: url('../content/adobe_stock_641378257.jpg');
+}
+
+.cards>div:nth-child(2)>div {
+    background-image: url('../content/adobe_stock_192050716.jpeg');
+}
+
+.cards>div:nth-child(3)>div {
+    background-image: url('../content/adobe_stock_748123437.jpg');
+}
+
+.cards>div:nth-child(4)>div {
+    background-image: url('../content/adobe_stock_573513339.jpg');
+}
+
+.cards>div:nth-child(5)>div {
+    background-image: url('../content/achtergrond_1_adobe_stock_823670847.jpg');
+}
+
+.cards>div:nth-child(6)>div {
+    background-image: url('../content/adobe_stock_427318514.jpg');
+}
+
+.cards>div>div>div {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.35);
+    min-height: 240px;
+    border-radius: 16px 16px 0px 0;
+}
+
+.cards>div>div>div>div:nth-of-type(1) p {
+    background-color: #90FF00;
+    margin-top: 30px;
+    padding: 5px 20px 5px 30px;
+    border-radius: 0px 16px 16px 0;
+    color: #121212;
+    font-family: 'MarkPro-Bold';
+}
+
+.cards>div>div>div>div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards>div>div>div>div:nth-of-type(3) {
+    text-align: end;
+    padding: 30px 30px 0 0;
+}
+
+.cards>div>div>div>div:nth-of-type(3) p {
+    margin: 0px;
+    font-family: 'MarkPro-Bold';
+    line-height: 1em;
+}
+
+.cards article {
+    background-color: #90FF00;
+    border-radius: 0px 0px 16px 16px;
+    text-align: start;
+    padding: 30px;
+    min-height: 250px;
+}
+
+article.over_ons {
+    background-color: #90FF00;
+    border-radius: 16px;
+    text-align: start;
+    padding: 30px;
+    min-height: 250px;
+}
 
 /* Footer */
 footer {
@@ -243,6 +317,12 @@ footer p {
 }
 
 /* Bronnenlijst */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+}
 
 main li a {
     color: white;
@@ -253,7 +333,70 @@ main li a:hover {
     transition: color 0.5s ease;
 }
 
-/* Responsive */
+/* Aflevering Pagina */
+
+.ep {
+    width: 750px;
+}
+
+.ep>div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cards article a {
+    color: black;
+    text-decoration: none;
+}
+
+.cards article a h2 {
+    line-height: 1em;
+}
+
+section {
+    background-color: #90FF00;
+    border-radius: 16px;
+    text-align: start;
+    padding: 30px;
+}
+
+.mediaplayer img {
+    width: 690px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+    width: 690px;
+    padding: 30px;
+    background-color: #90FF00;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+.testimonial img {
+    height: 90px;
+    width: 90px;
+    border-radius: 150px;
+    margin-bottom: 30px;
+}
+
+
+section ul li {
+    font-family: 'MarkPro-Book', serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsieve Styling */
 @media (max-width: 1250px) {
     .cards {
         display: grid;
@@ -281,26 +424,3 @@ main li a:hover {
         color: white;
     }
 }
-
-
-/* Code van ChatGPT: 
-    
-    grid-template-columns: repeat(3, 1fr);
-    text-underline-offset: 2px;
-    background-attachment: fixed;
-    flex-wrap: wrap;
-
-
-*/
-
-/* Code van kennis uit ElementorPro: 
-    
-    min-height: calc(100vh - 60px);
-    letter-spacing: -0.5px;
-    text-transform: uppercase;
-    opacity: 1;
-    gap: 30px;
-
-*/
-
-/* Extra bedankje aan Walter voor het leren van de @media */
